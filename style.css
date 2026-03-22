@@ -35,6 +35,11 @@ p {
   text-decoration: none;
   font-weight: bold;
 }
+
+/* Hover effect */
+.main-nav a:hover {
+  color: #00aaff;
+}
   
 /* white box with padding */
 section {
