@@ -46,3 +46,39 @@ section {
 border: 1px solid #ddd;
 border-radius: 6px;
 }
+
+/* borders and spacing */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background-color: #e8e8e8;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: white;
+  margin-top: 30px;
+}
+
+/* ID selector */
+
+#highlight-box {
+  background-color: #e0f3ff;
+  border-left: 4px solid #0099dd;
+  padding: 10px;
+  margin: 10px 0;
+}
