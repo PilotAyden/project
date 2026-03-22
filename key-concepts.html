@@ -1,1 +1,83 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Page title -->
+  <title>Key DNS Topics</title>
 
+  <!-- Link to the required CSS File -->
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <!-- Main Navigation menu for every page -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">History</a></li>
+      <li><a href="index.html">How DNS Works</a></li>
+      <li><a href="index.html">Key Concepts</a></li>
+      <li><a href="index.html">References</a></li>
+      <li><a href="index.html">About</a></li>
+    
+    </ul>
+  </nav>
+  <!-- Header -->
+  <header>
+    <h1>Key Concepts it the Domain Name System (DNS)</h1>
+    <p>Here are some important terms that help explain how DNS Works</p>
+  </header>
+
+  <!-- Main Content (7 Concepts) -->
+
+  <h2>1. DNS (Domain Name System)</h2>
+  <p>
+    DNS is the system that translates human-readable domain names like <strong>google.com</strong>
+    into numerical IP addresses that computers use to communicate.
+  </p>
+  
+    <h2>2. Recursive Resolver</h2>
+  <p>
+  The recursive resolver is the server that does the searching for you. When you type a
+  website into your browser, the resolver asks other DNS servers until it finds the correct
+  IP address.
+  </p>
+
+  <h2>3. Authoritative DNS Server</h2>
+  
+  <p>
+    This server holds the official DNS records for a domain. It provides the final answer in
+    the lookup process, such as the IP address for a website.
+  </p>
+
+  <h2>4. Root and TLD servers</h2>
+  
+  <p>
+    Root servers direct DNS queries to the correct top-level domain (TLD) servers, such as
+    <strong>.com</strong>, <strong>.org</strong>, or <strong>.edu</strong>. TLD servers then
+    point the resolver to the correct authoritative server.
+  </p>
+
+  <h2>5. DNS Caching</h2>
+  
+  <p>
+    DNS caching stores previous lookup results so that the resolver does not have to repeat the entire process. This makes browsing faster and reduces network traffic
+  </p>
+
+  <h2>6. Anycast Routing</h2>
+  
+  <p>
+    Anycast is a routing method where multiple servers share the same IP address. DNS uses
+    Anycast to send users to the closest and fastest server available.
+  </p>
+  
+  <h2>7. DNSSEC (DNS Security Extensions)</h2>
+  
+  <p>
+    DNSSEC adds cryptographic signatures to DNS records to protect users from tampered or
+    fake DNS responses. It improves security but is not fully adopted everywhere yet.
+  </p>
+  
+  
+  
