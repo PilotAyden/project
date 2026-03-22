@@ -1,1 +1,82 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Page title -->
+  <title>How DNS Works</title>
+
+  <!-- Link to the required CSS File -->
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <!-- Main Navigation menu for every page -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">History</a></li>
+      <li><a href="index.html">How DNS Works</a></li>
+      <li><a href="index.html">Key Concepts</a></li>
+      <li><a href="index.html">References</a></li>
+      <li><a href="index.html">About</a></li>
+    
+    </ul>
+  </nav>
+<!-- Header -->
+  <header>
+    <h1>How the Domain Name System (DNS) Works</h1>
+  </header>
+
+<section>
+  <!-- Root, TLD, and Authoritative Servers w/lists -->
+  <h2>The DNS Lookup Preocess</h2>
+  <p>
+    A DNS server is a computer system that stores, processes, and responds to DNS queries.
+      When you type a website like <strong>google.com</strong> into your browser, your device
+      does not know the IP address. Instead, it sends the question to a DNS resolver, which
+      begins the lookup process.
+  </p>
+  <p>
+    The lookup may involve several types of DNS servers:
+  </p>
+  <li><strong>Root DNS Servers</strong> - The highest level of the DNS hierarchy. They do not store domain records but point searches to the correct top level domain (TLD) servers.</li>
+  <li><strong>TLD Servers</strong> - These store information for domains ending in .com, .org, .net, .edu, etc.</li>
+  <li><strong>Authoritative DNS Servers</strong> - These hold the official DNS records for a domain and provide the final answer.</li>
+
+  <!-- Recursive Resolver -->
+  <h2> The Role of the Recursive Resolver</h2>
+  <p>
+    The recursive resolver is what does most of the work. It asks the root
+    server, then the TLD server, then the authoritative server until it finds the correct IP
+    address. Once it gets the answer, it sends it back to your device.
+
+  </p>
+
+  <!-- Caching with lists -->
+  
+  <h2> DNS Caching</h2>
+  <p>
+    DNS uses caching to speed up future lookups. Instead of repeating the entire process,
+    DNS stores answers temporarily in different layers:
+  </p>
+  
+  <ul>
+  <li><strong>Browser Cache</strong> - The fastest and shortest-lived cache.</li>
+  <li><strong>Operating System Cahce</strong> - Used by all apps on your device.</li>
+  <li><strong>Recursive Resolver Cache</strong> - The largest cache, storing millions of DNS records.</li>
+  </ul>
+
+  <!-- Modern DNS -->
+  
+  <h2>Modern DNS Improvements</h2>
+  <p>
+    Today’s DNS is faster and more secure than ever. Modern systems use global Anycast
+    networks to reduce latency and improve reliability. Security features like DNSSEC add
+    cryptographic protection to prevent tampering. Encrypted DNS protocols such as DNS over
+    HTTPS help protect user privacy.
+
+  </p>
+  
+</section>
 
