@@ -1,4 +1,5 @@
 /* Element Selector */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,6 +8,7 @@ body {
 }
 
 /* Headings */
+
 h1, h2 {
   color: #333;
 }
@@ -14,4 +16,33 @@ h1, h2 {
 */ paragraph spacing */
 p {
   line-height: 1.6;
+}
+
+/* Navigation Menu (w/ flexbox reqs) */
+
+.main-nav ul {
+  list-stlye: none;
+  margin: 0;
+  padding: 15px;
+  background-color: #222;
+
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+  
+*/ white box with padding */
+section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+
+/* Border Requirement */
+border: 1px solid #ddd;
+border-radius: 6px;
 }
