@@ -21,7 +21,7 @@ p {
 /* Navigation Menu (w/ flexbox reqs) */
 
 .main-nav ul {
-  list-stlye: none;
+  list-style: none;
   margin: 0;
   padding: 15px;
   background-color: #222;
