@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Page title -->
-  <title>Understanding Domain Name System (DNS)</title>
-
-  <!-- Link to the required CSS File -->
+  <title>Understanding the Domain Name System (DNS)</title>
   <link rel="stylesheet" href="style.css">
-  
 </head>
 
 <body>
-  <!-- Main Navigation menu for every page -->
+
+  <!-- Navigation -->
   <nav class="main-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -21,24 +18,60 @@
       <li><a href="references.html">References</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="quiz.html">Quiz</a></li>
-
-    
     </ul>
   </nav>
-  <!-- Header section with title and intro -->
+
+  <!-- Header -->
   <header>
     <h1>The Domain Name System (DNS)</h1>
-    <p>A simple Website explaining how DNS works, its history, and why it matters.</p>
+    <p>A simple website explaining how DNS works, its history, and why it matters.</p>
   </header>
 
-  <!-- Image -->
-  
-  <img src="https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png" 
-     alt="Diagram showing how DNS lookup works"
-     style="max-width: 100%; border: 1px solid #ccc; border-radius: 3px;">
+  <!-- Intro Image -->
+  <img src="https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-lookup-diagram.png"
+       alt="Diagram showing how DNS lookup works"
+       style="max-width: 100%; border: 1px solid #333; border-radius: 6px; margin-bottom: 20px;">
 
+  <!-- Why DNS Matters -->
+  <section>
+    <h2>Why DNS Matters</h2>
+    <p>
+      The Domain Name System is one of the most important technologies on the internet.
+      Without DNS, every website would need to be accessed using long numerical IP addresses,
+      making the web far less usable. DNS provides a layer of convenience, security, and
+      reliability that keeps the internet running smoothly.
+    </p>
 
-  <!-- Key Terms Section with lists -->
+    <div id="highlight-box">
+      DNS is often called the “phonebook of the internet” because it connects easy-to-remember
+      names to the numerical addresses computers use.
+    </div>
+
+    <p>
+      Modern DNS systems also include advanced features such as load balancing, global
+      distribution, and security protections that help defend against cyberattacks. Understanding
+      DNS is essential for anyone studying networking or web technologies.
+    </p>
+  </section>
+
+  <!-- How DNS Helps the Internet Work -->
+  <section>
+    <h2>How DNS Helps the Internet Work</h2>
+    <p>
+      DNS plays a role in almost every online activity. When you load a webpage, open an app,
+      send an email, or play an online game, DNS is working behind the scenes to route your
+      request to the correct server.
+    </p>
+
+    <ul>
+      <li><strong>Faster browsing:</strong> DNS caching reduces lookup time.</li>
+      <li><strong>Better reliability:</strong> Anycast routing sends users to the closest server.</li>
+      <li><strong>Improved security:</strong> DNSSEC and encrypted DNS protect users from attacks.</li>
+      <li><strong>Scalability:</strong> DNS load balancing helps large websites handle traffic.</li>
+    </ul>
+  </section>
+
+  <!-- Key Terms -->
   <section>
     <h2>Key Terms</h2>
     <ul>
@@ -47,29 +80,27 @@
       <li>Authoritative Server</li>
       <li>Root Server</li>
       <li>Anycast</li>
-      
     </ul>
   </section>
 
-  <!-- Table of contents with links -->
+  <!-- Table of Contents -->
   <section>
     <h2>Table of Contents</h2>
     <table>
       <tr><th>Page</th><th>Description</th></tr>
       <tr><td><a href="history.html">History</a></td><td>How DNS was created and evolved</td></tr>
-      <tr><td><a href="how-dns-works.html">How a DNS works</a></td><td>Important DNS ideas explained simply</td></tr>
+      <tr><td><a href="how-dns-works.html">How DNS Works</a></td><td>Important DNS ideas explained simply</td></tr>
+      <tr><td><a href="key-concepts.html">Key Concepts</a></td><td>Critical topics and definitions</td></tr>
       <tr><td><a href="references.html">References</a></td><td>Sources and learning resources</td></tr>
       <tr><td><a href="about.html">About</a></td><td>About the author and project</td></tr>
-      <tr><td><a href="key-concepts.html">Key Concepts</a></td><td>Critical Topics Overview</td></tr>
-      
+      <tr><td><a href="quiz.html">Quiz</a></td><td>Test your DNS knowledge</td></tr>
     </table>
   </section>
 
-  <!-- Project note -->
+  <!-- Footer -->
   <footer>
-    <p>This site is a class project for IT 3203 Visit the course page:
+    <p>This site is a class project for IT 3203. Visit the course page:
       <a href="https://ksuweb.github.io/IT3203/">IT 3203 Website</a>
-      
     </p>
   </footer>
 
