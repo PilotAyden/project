@@ -27,4 +27,45 @@
 
   <section>
     <form id="dnsQuiz">
+      
+      <!-- 1. Fill in the blank -->
+      <h2>1. Fill in the blank</h2>
+      <label>DNS translates domain names into ________.</label><br>
+      <input type="text" id="q1">
+
+      <!-- 2. Multiple Choice -->
+      <h2>2. Which server holds the official DNS records for a domain?</h2>
+      <label><input type="radio" name="q2" value="root"> Root Server</label><br>
+      <label><input type="radio" name="q2" value="tld"> TLD Server</label><br>
+      <label><input type="radio" name="q2" value="auth"> Authoritative Server</label><br>
+
+      <!-- 3. Multiple Choice -->
+      <h2>3. What does a recursive resolver do?</h2>
+      <label><input type="radio" name="q3" value="stores"> Stores DNS records permanently</label><br>
+      <label><input type="radio" name="q3" value="searches"> Searches other DNS servers to find answers</label><br>
+      <label><input type="radio" name="q3" value="emails"> Sends email traffic</label><br>
+
+      <!-- 4. Multiple Choice -->
+      <h2>4. Which record type maps a domain to an IPv4 address?</h2>
+      <label><input type="radio" name="q4" value="mx"> MX Record</label><br>
+      <label><input type="radio" name="q4" value="cname"> CNAME Record</label><br>
+      <label><input type="radio" name="q4" value="a"> A Record</label><br>
+
+      <!-- 5. Multi-select -->
+      <h2>5. Select all that are DNS security technologies:</h2>
+      <label><input type="checkbox" name="q5" value="dnssec"> DNSSEC</label><br>
+      <label><input type="checkbox" name="q5" value="doh"> DNS over HTTPS</label><br>
+      <label><input type="checkbox" name="q5" value="ftp"> FTP</label><br>
+      <label><input type="checkbox" name="q5" value="telnet"> Telnet</label><br>
+
+      <br>
+      <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+      <button type="reset" onclick="resetResults()">Reset</button>
+
+    </form>
+
+    <div id="results"></div>
+
+  </section>
+
 
