@@ -29,51 +29,87 @@
 
   <!-- Intro Section -->
   <section>
+    <h2>Understanding the Core Ideas</h2>
+    <p>
+      DNS is made up of several components that work together to translate domain names into 
+      IP addresses. Each part plays a specific role in making the internet fast, reliable, 
+      and easy to use. Below are the essential concepts you should know.
+    </p>
 
-    <h2>1. Domain Names</h2>
-    <img src="images/domain.png" class="icon-light" alt="Domain icon" width="80">
+    <div id="highlight-box">
+      These concepts form the foundation of how DNS operates — understanding them makes the 
+      entire system much easier to learn.
+    </div>
+  </section>
+
+  <!-- Concepts List -->
+  <section>
+
+    <!-- 1. Domain Names -->
+    <div class="concept-header">
+      <img src="images/domain.png" class="icon-light" alt="Domain icon">
+      <h2>1. Domain Names</h2>
+    </div>
     <p>
       Human‑readable names like <strong>example.com</strong> that make it easier to access 
       websites without remembering IP addresses.
     </p>
 
-    <h2>2. IP Addresses</h2>
-    <img src="images/ip.png" class="icon-light" alt="IP icon" width="80">
+    <!-- 2. IP Addresses -->
+    <div class="concept-header">
+      <img src="images/ip.png" class="icon-light" alt="IP icon">
+      <h2>2. IP Addresses</h2>
+    </div>
     <p>
       Numerical identifiers used by computers to locate and communicate with each other. 
       DNS maps domain names to these addresses.
     </p>
 
-    <h2>3. Recursive Resolvers</h2>
-    <img src="images/resolver.png" class="icon-light" alt="Resolver icon" width="80">
+    <!-- 3. Recursive Resolvers -->
+    <div class="concept-header">
+      <img src="images/resolver.png" class="icon-light" alt="Resolver icon">
+      <h2>3. Recursive Resolvers</h2>
+    </div>
     <p>
       Servers that perform DNS lookups on behalf of users. They check caches, contact root 
       servers, and follow the chain until they find the correct IP address.
     </p>
 
-    <h2>4. Root Servers</h2>
-    <img src="images/root.png" class="icon-light" alt="Root server icon" width="80">
+    <!-- 4. Root Servers -->
+    <div class="concept-header">
+      <img src="images/root.png" class="icon-light" alt="Root server icon">
+      <h2>4. Root Servers</h2>
+    </div>
     <p>
       The highest level of the DNS hierarchy. Root servers direct resolvers to the correct 
       top‑level domain (TLD) servers.
     </p>
 
-    <h2>5. TLD Servers</h2>
-    <img src="images/tld.png" class="icon-light" alt="TLD icon" width="80">
+    <!-- 5. TLD Servers -->
+    <div class="concept-header">
+      <img src="images/tld.png" class="icon-light" alt="TLD icon">
+      <h2>5. TLD Servers</h2>
+    </div>
     <p>
       Servers responsible for top‑level domains like <strong>.com</strong>, <strong>.org</strong>, 
       and <strong>.net</strong>. They point to the authoritative servers for each domain.
     </p>
 
-    <h2>6. Authoritative Name Servers</h2>
-    <img src="images/authoritative.png" class="icon-light" alt="Authoritative icon" width="80">
+    <!-- 6. Authoritative Servers -->
+    <div class="concept-header">
+      <img src="images/authoritative.png" class="icon-light" alt="Authoritative icon">
+      <h2>6. Authoritative Name Servers</h2>
+    </div>
     <p>
       Servers that store the official DNS records for a domain. They provide the final answer 
       during a DNS lookup.
     </p>
 
-    <h2>7. DNS Records</h2>
-    <img src="images/records.png" class="icon-light" alt="DNS records icon" width="80">
+    <!-- 7. DNS Records -->
+    <div class="concept-header">
+      <img src="images/records.png" class="icon-light" alt="DNS records icon">
+      <h2>7. DNS Records</h2>
+    </div>
     <p>
       Entries that define how a domain behaves. Common types include:
     </p>
@@ -84,15 +120,21 @@
       <li><strong>MX Record:</strong> Specifies mail servers.</li>
     </ul>
 
-    <h2>8. DNS Load Balancing</h2>
-    <img src="images/loadbalance.png" class="icon-light" alt="Load balancing icon" width="80">
+    <!-- 8. DNS Load Balancing -->
+    <div class="concept-header">
+      <img src="images/loadbalance.png" class="icon-light" alt="Load balancing icon">
+      <h2>8. DNS Load Balancing</h2>
+    </div>
     <p>
       Many websites use DNS to distribute traffic across multiple servers. This improves 
       performance and prevents overload during busy periods.
     </p>
 
-    <h2>9. Reverse DNS Lookup</h2>
-    <img src="images/reverse.png" class="icon-light" alt="Reverse DNS icon" width="80">
+    <!-- 9. Reverse DNS -->
+    <div class="concept-header">
+      <img src="images/reverse.png" class="icon-light" alt="Reverse DNS icon">
+      <h2>9. Reverse DNS Lookup</h2>
+    </div>
     <p>
       A reverse DNS lookup does the opposite of a normal DNS query: it takes an IP address 
       and returns the associated domain name. It is commonly used for email security and 
@@ -100,7 +142,6 @@
     </p>
 
   </section>
-
 
   <!-- Footer -->
   <footer>
