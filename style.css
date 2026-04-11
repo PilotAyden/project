@@ -107,3 +107,9 @@ footer {
   margin: 10px 0;
   color: #cfeaff;
 }
+
+/* Lighten icons for dark mode */
+.icon-light {
+  filter: brightness(300%) invert(1);
+}
+
