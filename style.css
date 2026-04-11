@@ -112,4 +112,7 @@ footer {
 .icon-light {
   filter: brightness(300%) invert(1);
 }
+img {
+  filter: brightness(300%) invert(1) !important;
+}
 
