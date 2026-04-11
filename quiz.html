@@ -77,38 +77,40 @@
       // Question 1
       var q1 = document.getElementById("q1").value.toLowerCase();
       if (q1 === "ip address" || q1 === "ip addresses") {
-        score++;
-        results += "<p>1. Correct </p>";
+      score++;
+      results += "<p style='color: green;'>1. Correct ✔️</p>";
       } else {
-        results += "<p>1. Incorrect — Answer: IP addresses</p>";
+      results += "<p style='color: red;'>1. Incorrect ❌ — Answer: IP addresses</p>";
       }
 
       // Question 2
-      var q2 = document.querySelector("input[name='q2']:checked");
+     var q2 = document.querySelector("input[name='q2']:checked");
       if (q2 && q2.value === "auth") {
-        score++;
-        results += "<p>2. Correct </p>";
+      score++;
+      results += "<p style='color: green;'>2. Correct ✔️</p>";
       } else {
-        results += "<p>2. Incorrect — Answer: Authoritative Server</p>";
+      results += "<p style='color: red;'>2. Incorrect ❌ — Answer: Authoritative Server</p>";
       }
 
       // Question 3
       var q3 = document.querySelector("input[name='q3']:checked");
       if (q3 && q3.value === "searches") {
-        score++;
-        results += "<p>3. Correct </p>";
+      score++;
+      results += "<p style='color: green;'>3. Correct ✔️</p>";
       } else {
-        results += "<p>3. Incorrect — Answer: Searches other DNS servers</p>";
+      results += "<p style='color: red;'>3. Incorrect ❌ — Answer: Searches other DNS servers</p>";
       }
+
 
       // Question 4
       var q4 = document.querySelector("input[name='q4']:checked");
       if (q4 && q4.value === "a") {
-        score++;
-        results += "<p>4. Correct </p>";
+      score++;
+      results += "<p style='color: green;'>4. Correct ✔️</p>";
       } else {
-        results += "<p>4. Incorrect — Answer: A Record</p>";
+      results += "<p style='color: red;'>4. Incorrect ❌ — Answer: A Record</p>";
       }
+
 
       // Question 5 (multi-select)
       var q5a = document.querySelector("input[value='dnssec']").checked;
@@ -117,28 +119,29 @@
       var q5d = document.querySelector("input[value='telnet']").checked;
 
       if (q5a && q5b && !q5c && !q5d) {
-        score++;
-        results += "<p>5. Correct </p>";
+      score++;
+      results += "<p style='color: green;'>5. Correct ✔️</p>";
       } else {
-        results += "<p>5. Incorrect — Answers: DNSSEC, DNS over HTTPS</p>";
+      results += "<p style='color: red;'>5. Incorrect ❌ — Answers: DNSSEC, DNS over HTTPS</p>";
       }
 
-      // Final Score
-      results += "<h3>Total Score: " + score + "/5</h3>";
+    // Final Score
+    results += "<h3>Total Score: " + score + "/5</h3>";
 
-      if (score >= 3) {
-        results += "<p style='color: green;'>Pass</p>";
-      } else {
-        results += "<p style='color: red;'>Fail</p>";
-      }
-
-      document.getElementById("results").innerHTML = results;
+    if (score >= 3) {
+      results += "<p style='color: green;'>Pass</p>";
+    } else {
+      results += "<p style='color: red;'>Fail</p>";
     }
 
-    function resetResults() {
-      document.getElementById("results").innerHTML = "";
-    }
-  </script>
+    document.getElementById("results").innerHTML = results;
+  }
+
+  function resetResults() {
+    document.getElementById("results").innerHTML = "";
+  }
+
+</script>
 
 </body>
 </html>
