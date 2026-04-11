@@ -1,58 +1,56 @@
-/* Element Selector */
+/*  GLOBAL DARK THEME */
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #0d0d0d;   /* Dark background */
+  color: #e6e6e6;              /* Light text */
 }
 
 /* Headings */
-
 h1, h2 {
-  color: #333;
+  color: #66cfff;              /* Neon blue headings */
 }
 
-/* paragraph spacing */
+/* Paragraph spacing */
 p {
   line-height: 1.6;
+  color: #dcdcdc;
 }
 
-/* Navigation Menu (w/ flexbox reqs) */
+/*  NAVIGATION BAR */
 
 .main-nav ul {
   list-style: none;
   margin: 0;
   padding: 15px;
-  background-color: #222;
-
+  background-color: #111;      /* Darker nav bar */
   display: flex;
   gap: 20px;
 }
 
 .main-nav a {
-  color: white;
+  color: #e6e6e6;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Hover effect */
 .main-nav a:hover {
-  color: #00aaff;
+  color: #66cfff;              /* Neon hover */
 }
-  
-/* white box with padding */
+
+/* CONTENT SECTIONS */
+
 section {
-  background-color: white;
+  background-color: #1a1a1a;   /* Dark card background */
   margin: 20px;
   padding: 20px;
-
-/* Border Requirement */
-border: 1px solid #ddd;
-border-radius: 6px;
+  border: 1px solid #333;      /* border */
+  border-radius: 6px;
 }
 
-/* borders and spacing */
+/* TABLES */
 
 table {
   width: 100%;
@@ -61,19 +59,20 @@ table {
 }
 
 th, td {
-  border: 1px solid #ccc;
+  border: 1px solid #444;
   padding: 10px;
 }
 
 th {
-  background-color: #e8e8e8;
+  background-color: #222;
+  color: #66cfff;
 }
 
-/* Results box */
+/* QUIZ RESULTS BOX */
 
 #results {
-  background-color: #f7f7f7;
-  border: 2px solid #ccc;
+  background-color: #141414;
+  border: 2px solid #333;
   padding: 15px;
   margin-top: 20px;
   border-radius: 6px;
@@ -86,24 +85,25 @@ th {
 
 #results h3 {
   margin-top: 15px;
+  color: #66cfff;
 }
 
-
-/* footer */
+/* FOOTER */
 
 footer {
   text-align: center;
   padding: 15px;
-  background-color: #222;
-  color: white;
+  background-color: #111;
+  color: #e6e6e6;
   margin-top: 30px;
 }
 
-/* ID selector */
+/* HIGHLIGHT BOX (ID SELECTOR) */
 
 #highlight-box {
-  background-color: #e0f3ff;
-  border-left: 4px solid #0099dd;
+  background-color: #0f1f2b;        /* Dark blue background */
+  border-left: 4px solid #66cfff;   /* Neon blue accent */
   padding: 10px;
   margin: 10px 0;
+  color: #cfeaff;
 }
