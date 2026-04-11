@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Page title -->
-  <title>History of DNS</title>
-
-  <!-- Link to the required CSS File -->
+  <title>History of the Domain Name System (DNS)</title>
   <link rel="stylesheet" href="style.css">
-  
 </head>
 
 <body>
-  <!-- Main Navigation menu for every page -->
+
+  <!-- Navigation -->
   <nav class="main-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -21,49 +18,87 @@
       <li><a href="references.html">References</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="quiz.html">Quiz</a></li>
-
-    
     </ul>
   </nav>
-<!-- Header -->
+
+  <!-- Header -->
   <header>
-    <h1>History of the Domain Name System</h1>
+    <h1>The History of DNS</h1>
+    <p>How the Domain Name System was created, why it was needed, and how it evolved into the global system we use today.</p>
   </header>
 
-  <!-- Main Content Section -->
+  <!-- Intro Section -->
   <section>
-    <h2>Early Networking Before DNS</h2>
-    
+    <h2>Before DNS: The Early Internet</h2>
+    <p>
+      Before DNS existed, computers on the early ARPANET used a single text file called 
+      <strong>HOSTS.TXT</strong> to map names to IP addresses. This file was manually updated 
+      and distributed to every machine on the network. As the internet grew, this system became 
+      slow, inefficient, and impossible to maintain.
+    </p>
 
-  <p>
-    Before the modern internet existed, computer networks were small and mostly used by universities,
-    government agencies, and research groups. As more computers were added, people needed a way to
-    keep track of hostnames and IP addresses. At first, this was done manually using a single file
-    called <strong>HOSTS.TXT</strong>, which had to be updated by hand.
-  </p>
+    <div id="highlight-box">
+      The HOSTS.TXT file had to be downloaded manually by every computer — imagine updating 
+      thousands of websites by hand every day.
+    </div>
 
-  <h2>The Creation of DNS</h2>
-  <p>
-    In 1983, Paul Mockapetris designed the Domain Name System (DNS). It replaced the old manual
-    system with a hierarchy of servers that could answer name lookup requests automatically.
-    DNS became an official internet standard in 1986.
-  </p>
-  
-  <h2>Dns in the Modern Internet</h2>
-  <p>
-    Today, DNS is a core part of how the internet works. It has grown to support billions of devices,
-    global traffic, and advanced features like security extensions and Anycast routing. Even though
-    it has evolved, DNS still performs the same basic job, translating human readable names into IP
-    addresses.
+    <p>
+      By the early 1980s, the internet needed a scalable, automated naming system. This led to 
+      the creation of DNS, which replaced the centralized file with a distributed, hierarchical 
+      system that could grow with the internet.
+    </p>
+  </section>
 
-  </p>
-</section>
-    
-  <!-- Project note -->
+  <!-- Timeline Section -->
+  <section>
+    <h2>DNS Timeline Highlights</h2>
+
+    <ul>
+      <li><strong>1983:</strong> Paul Mockapetris designs the first version of DNS.</li>
+      <li><strong>1984:</strong> The first root servers are deployed, forming the top of the DNS hierarchy.</li>
+      <li><strong>1985:</strong> The first top-level domains (TLDs) are introduced: .com, .org, .edu, .gov, .mil, and .net.</li>
+      <li><strong>1998:</strong> ICANN is created to help manage domain names and coordinate DNS globally.</li>
+      <li><strong>2008:</strong> DNSSEC is introduced to add cryptographic security to DNS responses.</li>
+      <li><strong>2018–Present:</strong> Encrypted DNS protocols like DoH and DoT gain widespread adoption.</li>
+    </ul>
+
+    <p>
+      Over the decades, DNS has evolved from a simple naming system into a global infrastructure 
+      supporting billions of devices. Its growth reflects the expansion of the internet itself.
+    </p>
+  </section>
+
+  <!-- DNS Hierarchy Diagram -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNS_illustration.png/640px-DNS_illustration.png"
+       alt="DNS hierarchy diagram showing root, TLD, and authoritative servers"
+       style="max-width: 100%; border: 1px solid #333; border-radius: 6px; margin: 20px 0;">
+
+  <!-- Evolution Section -->
+  <section>
+    <h2>How DNS Evolved Over Time</h2>
+    <p>
+      As the internet expanded, DNS had to adapt to new challenges. Early DNS servers handled 
+      only basic name-to-IP lookups, but modern DNS includes advanced features such as:
+    </p>
+
+    <ul>
+      <li><strong>Anycast routing</strong> for faster global performance</li>
+      <li><strong>Load balancing</strong> to distribute traffic across servers</li>
+      <li><strong>DNSSEC</strong> to prevent spoofing and tampering</li>
+      <li><strong>Encrypted DNS</strong> to protect user privacy</li>
+      <li><strong>Massive caching systems</strong> to reduce lookup time</li>
+    </ul>
+
+    <p>
+      These improvements allow DNS to remain fast, secure, and reliable even as the internet 
+      continues to grow at an enormous scale.
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>This site is a class project for IT 3203 Visit the course page:
+    <p>This site is a class project for IT 3203. Visit the course page:
       <a href="https://ksuweb.github.io/IT3203/">IT 3203 Website</a>
-      
     </p>
   </footer>
 
