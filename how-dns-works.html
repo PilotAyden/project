@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Page title -->
   <title>How DNS Works</title>
-
-  <!-- Link to the required CSS File -->
   <link rel="stylesheet" href="style.css">
-  
 </head>
 
 <body>
-  <!-- Main Navigation menu for every page -->
+
+  <!-- Navigation -->
   <nav class="main-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -21,79 +18,84 @@
       <li><a href="references.html">References</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="quiz.html">Quiz</a></li>
-
-    
     </ul>
   </nav>
-<!-- Header -->
+
+  <!-- Header -->
   <header>
-    <h1>How the Domain Name System (DNS) Works</h1>
+    <h1>How DNS Works</h1>
+    <p>A step-by-step explanation of how your computer finds the correct IP address for any website.</p>
   </header>
 
-<section>
-  <!-- Root, TLD, and Authoritative Servers w/lists -->
-  <h2>The DNS Lookup Preocess</h2>
-  <p>
-    A DNS server is a computer system that stores, processes, and responds to DNS queries.
-      When you type a website like <strong>google.com</strong> into your browser, your device
-      does not know the IP address. Instead, it sends the question to a DNS resolver, which
-      begins the lookup process.
-  </p>
-  <p>
-    The lookup may involve several types of DNS servers:
-  </p>
-  
-  <ul>
-  <li><strong>Root DNS Servers</strong> - The highest level of the DNS hierarchy. They do not store domain records but point searches to the correct top level domain (TLD) servers.</li>
-  <li><strong>TLD Servers</strong> - These store information for domains ending in .com, .org, .net, .edu, etc.</li>
-  <li><strong>Authoritative DNS Servers</strong> - These hold the official DNS records for a domain and provide the final answer.</li>
-  </ul>
+  <!-- Intro Section -->
+  <section>
+    <h2>What Happens When You Type a Website Into Your Browser?</h2>
+    <p>
+      When you enter a domain name like <strong>google.com</strong> into your browser, your device
+      begins a DNS lookup. This process finds the correct IP address so your browser knows where
+      to send the request. DNS works behind the scenes in milliseconds, but several important
+      steps happen along the way.
+    </p>
 
-  <!-- Recursive Resolver -->
-  <h2> The Role of the Recursive Resolver</h2>
-  <p>
-    The recursive resolver is what does most of the work. It asks the root
-    server, then the TLD server, then the authoritative server until it finds the correct IP
-    address. Once it gets the answer, it sends it back to your device.
+    <div id="highlight-box">
+      DNS works so quickly that most users never notice it — but without it, the internet would
+      be nearly impossible to use.
+    </div>
+  </section>
 
-  </p>
+  <!-- Step-by-Step Lookup -->
+  <section>
+    <h2>Step-by-Step: How a DNS Lookup Works</h2>
 
-<img src="https://www.cloudflare.com/img/learning/dns/what-is-dns/dns-hierarchy-diagram.png"
-       alt="DNS hierarchy diagram"
-       style="max-width: 100%; border: 1px solid #ccc; border-radius: 6px; margin: 20px 0;">
+    <ol>
+      <li><strong>Your browser checks its cache.</strong> If it has recently visited the site, it may already know the IP address.</li>
+      <li><strong>Your operating system checks its cache.</strong> If the browser doesn’t know, your computer might.</li>
+      <li><strong>The recursive resolver is contacted.</strong> This is usually run by your ISP or a public DNS provider like Google or Cloudflare.</li>
+      <li><strong>The resolver checks its own cache.</strong> If it has the answer, the lookup ends here.</li>
+      <li><strong>The resolver asks a root server.</strong> The root server directs the resolver to the correct top-level domain (TLD) server.</li>
+      <li><strong>The resolver asks the TLD server.</strong> For example, the .com TLD server points to the authoritative server for google.com.</li>
+      <li><strong>The resolver asks the authoritative server.</strong> This server holds the official DNS records and returns the IP address.</li>
+      <li><strong>The resolver sends the IP address back to your device.</strong></li>
+      <li><strong>Your browser connects to the website.</strong></li>
+    </ol>
 
-  <!-- Caching with lists -->
-  
-  <h2> DNS Caching</h2>
-  <p>
-    DNS uses caching to speed up future lookups. Instead of repeating the entire process,
-    DNS stores answers temporarily in different layers:
-  </p>
-  
-  <ul>
-  <li><strong>Browser Cache</strong> - The fastest and shortest-lived cache.</li>
-  <li><strong>Operating System Cahce</strong> - Used by all apps on your device.</li>
-  <li><strong>Recursive Resolver Cache</strong> - The largest cache, storing millions of DNS records.</li>
-  </ul>
+    <p>
+      Even though this process involves multiple servers, it usually completes in under a
+      hundred milliseconds thanks to caching and optimized routing.
+    </p>
+  </section>
 
-  <!-- Modern DNS -->
-  
-  <h2>Modern DNS Improvements</h2>
-  <p>
-    Today’s DNS is faster and more secure than ever. Modern systems use global Anycast
-    networks to reduce latency and improve reliability. Security features like DNSSEC add
-    cryptographic protection to prevent tampering. Encrypted DNS protocols such as DNS over
-    HTTPS help protect user privacy.
+  <!-- Diagram -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DNS_resolver.png/640px-DNS_resolver.png"
+       alt="DNS resolver diagram showing recursive lookup flow"
+       style="max-width: 100%; border: 1px solid #333; border-radius: 6px; margin: 20px 0;">
 
-  </p>
-  
-</section>
+  <!-- Why DNS Is Fast -->
+  <section>
+    <h2>Why DNS Is So Fast</h2>
+    <p>
+      DNS is designed for speed. Most DNS lookups take only a few milliseconds because recursive
+      resolvers maintain large caches and use optimized routing. Many DNS providers also use
+      Anycast networks, which route your request to the closest available server.
+    </p>
 
-  <!-- Project note -->
+    <ul>
+      <li><strong>Caching:</strong> Saves previous lookups to avoid repeating work.</li>
+      <li><strong>Anycast routing:</strong> Sends your request to the nearest DNS server.</li>
+      <li><strong>Distributed infrastructure:</strong> DNS servers exist all over the world.</li>
+      <li><strong>Lightweight protocol:</strong> DNS messages are small and efficient.</li>
+    </ul>
+
+    <p>
+      This combination ensures that DNS rarely becomes a bottleneck, even during high traffic
+      periods.
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>This site is a class project for IT 3203 Visit the course page:
+    <p>This site is a class project for IT 3203. Visit the course page:
       <a href="https://ksuweb.github.io/IT3203/">IT 3203 Website</a>
-      
     </p>
   </footer>
 
