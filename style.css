@@ -49,6 +49,22 @@ section {
   border: 1px solid #333;
   border-radius: 6px;
 }
+.concept-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.concept-header img {
+  width: 60px;
+  height: 60px;
+}
+
+.concept-header h2 {
+  margin: 0;
+}
+
 
 
 /* TABLES */
