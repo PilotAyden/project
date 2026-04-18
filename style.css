@@ -129,3 +129,74 @@ footer {
 .icon-light {
   filter: brightness(300%) invert(1);
 }
+ 
+/* Tablet Breakpoint (≤ 768px) */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  section {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .concept-header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .content-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* Mobile Breakpoint (≤ 480px) */
+
+@media (max-width: 480px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .concept-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .concept-header img {
+    width: 45px;
+    height: 45px;
+  }
+
+  section {
+    margin: 8px;
+    padding: 12px;
+  }
+
+  button, input[type="text"], input[type="radio"], input[type="checkbox"] {
+    transform: scale(1.2);
+    margin: 8px 0;
+  }
+
+  #results {
+    font-size: 0.95em;
+  }
+}
