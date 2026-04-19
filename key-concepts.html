@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Key DNS Concepts</title>
+  <title>Key Concepts in the Domain Name System (DNS)</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,124 +23,136 @@
 
   <!-- Header -->
   <header>
-    <h1>Key DNS Concepts</h1>
-    <p>A breakdown of the most important ideas behind the Domain Name System.</p>
+    <h1>Key Concepts in the Domain Name System (DNS)</h1>
+    <p>These core ideas form the foundation of how DNS works behind the scenes to keep the internet running smoothly.</p>
   </header>
 
-  <!-- Intro Section -->
+  <!-- Concept 1 -->
   <section>
-    <h2>Understanding the Core Ideas</h2>
+    <div class="concept-header">
+      <img src="images/hierarchy.png" alt="DNS Hierarchy Icon" class="icon-light">
+      <h2>DNS Hierarchy</h2>
+    </div>
     <p>
-      DNS is made up of several components that work together to translate domain names into 
-      IP addresses. Each part plays a specific role in making the internet fast, reliable, 
-      and easy to use. Below are the essential concepts you should know.
+      DNS is organized as a hierarchical tree structure. At the top is the <strong>root</strong>, followed by 
+      <strong>top-level domains (TLDs)</strong> like .com, .org, and .edu. Below TLDs are <strong>second-level domains</strong> 
+      such as example.com, and beneath those are <strong>subdomains</strong>.
     </p>
+    <p>
+      This hierarchy allows DNS to scale globally while delegating responsibility to different organizations.
+    </p>
+  </section>
 
+  <!-- Concept 2 -->
+  <section>
+    <div class="concept-header">
+      <img src="images/root-server.png" alt="Root Server Icon" class="icon-light">
+      <h2>Root Servers</h2>
+    </div>
+    <p>
+      Root servers are the highest level of DNS. They don’t store IP addresses for websites, but they direct 
+      resolvers to the correct <strong>TLD name servers</strong>. There are 13 root server clusters worldwide, 
+      each operated by different organizations.
+    </p>
     <div id="highlight-box">
-      These concepts form the foundation of how DNS operates — understanding them makes the 
-      entire system much easier to learn.
+      Even though there are only 13 root server names, each one is backed by hundreds of physical servers using Anycast.
     </div>
   </section>
 
-  <!-- Concepts List -->
+  <!-- Concept 3 -->
   <section>
-
-    <!-- 1. Domain Names -->
     <div class="concept-header">
-      <img src="images/domain.png" class="icon-light" alt="Domain icon">
-      <h2>1. Domain Names</h2>
+      <img src="images/tld.png" alt="TLD Icon" class="icon-light">
+      <h2>Top-Level Domains (TLDs)</h2>
     </div>
     <p>
-      Human‑readable names like <strong>example.com</strong> that make it easier to access 
-      websites without remembering IP addresses.
+      TLDs are the first level beneath the root. Examples include <strong>.com</strong>, <strong>.org</strong>, 
+      <strong>.net</strong>, and country codes like <strong>.uk</strong> or <strong>.jp</strong>. Each TLD is 
+      managed by a registry that maintains authoritative DNS servers for that domain.
     </p>
+  </section>
 
-    <!-- 2. IP Addresses -->
+  <!-- Concept 4 -->
+  <section>
     <div class="concept-header">
-      <img src="images/ip.png" class="icon-light" alt="IP icon">
-      <h2>2. IP Addresses</h2>
+      <img src="images/authoritative.png" alt="Authoritative Server Icon" class="icon-light">
+      <h2>Authoritative Name Servers</h2>
     </div>
     <p>
-      Numerical identifiers used by computers to locate and communicate with each other. 
-      DNS maps domain names to these addresses.
+      Authoritative servers store the official DNS records for a domain. When a resolver needs the IP address 
+      for a website, the authoritative server provides the final answer. Organizations often run their own 
+      authoritative servers or use DNS hosting providers.
     </p>
+  </section>
 
-    <!-- 3. Recursive Resolvers -->
+  <!-- Concept 5 -->
+  <section>
     <div class="concept-header">
-      <img src="images/resolver.png" class="icon-light" alt="Resolver icon">
-      <h2>3. Recursive Resolvers</h2>
+      <img src="images/resolver.png" alt="Resolver Icon" class="icon-light">
+      <h2>Recursive Resolvers</h2>
     </div>
     <p>
-      Servers that perform DNS lookups on behalf of users. They check caches, contact root 
-      servers, and follow the chain until they find the correct IP address.
+      A recursive resolver performs the full DNS lookup on behalf of the user. It checks its cache, queries 
+      root servers, TLD servers, and authoritative servers as needed. ISPs, Google (8.8.8.8), and Cloudflare 
+      (1.1.1.1) operate popular recursive resolvers.
     </p>
+  </section>
 
-    <!-- 4. Root Servers -->
+  <!-- Concept 6 -->
+  <section>
     <div class="concept-header">
-      <img src="images/root.png" class="icon-light" alt="Root server icon">
-      <h2>4. Root Servers</h2>
+      <img src="images/records.png" alt="DNS Records Icon" class="icon-light">
+      <h2>DNS Records</h2>
     </div>
     <p>
-      The highest level of the DNS hierarchy. Root servers direct resolvers to the correct 
-      top‑level domain (TLD) servers.
-    </p>
-
-    <!-- 5. TLD Servers -->
-    <div class="concept-header">
-      <img src="images/tld.png" class="icon-light" alt="TLD icon">
-      <h2>5. TLD Servers</h2>
-    </div>
-    <p>
-      Servers responsible for top‑level domains like <strong>.com</strong>, <strong>.org</strong>, 
-      and <strong>.net</strong>. They point to the authoritative servers for each domain.
-    </p>
-
-    <!-- 6. Authoritative Servers -->
-    <div class="concept-header">
-      <img src="images/authoritative.png" class="icon-light" alt="Authoritative icon">
-      <h2>6. Authoritative Name Servers</h2>
-    </div>
-    <p>
-      Servers that store the official DNS records for a domain. They provide the final answer 
-      during a DNS lookup.
-    </p>
-
-    <!-- 7. DNS Records -->
-    <div class="concept-header">
-      <img src="images/records.png" class="icon-light" alt="DNS records icon">
-      <h2>7. DNS Records</h2>
-    </div>
-    <p>
-      Entries that define how a domain behaves. Common types include:
+      DNS records define how a domain behaves. Common types include:
     </p>
     <ul>
-      <li><strong>A Record:</strong> Maps a domain to an IPv4 address.</li>
-      <li><strong>AAAA Record:</strong> Maps a domain to an IPv6 address.</li>
-      <li><strong>CNAME:</strong> Points one domain to another.</li>
-      <li><strong>MX Record:</strong> Specifies mail servers.</li>
+      <li><strong>A:</strong> IPv4 address</li>
+      <li><strong>AAAA:</strong> IPv6 address</li>
+      <li><strong>CNAME:</strong> Alias to another domain</li>
+      <li><strong>MX:</strong> Mail server information</li>
+      <li><strong>NS:</strong> Name server for the domain</li>
+      <li><strong>TXT:</strong> Text data for verification and security</li>
     </ul>
+  </section>
 
-    <!-- 8. DNS Load Balancing -->
+  <!-- Concept 7 -->
+  <section>
     <div class="concept-header">
-      <img src="images/loadbalance.png" class="icon-light" alt="Load balancing icon">
-      <h2>8. DNS Load Balancing</h2>
+      <img src="images/caching.png" alt="Caching Icon" class="icon-light">
+      <h2>DNS Caching</h2>
     </div>
     <p>
-      Many websites use DNS to distribute traffic across multiple servers. This improves 
-      performance and prevents overload during busy periods.
+      DNS caching stores lookup results temporarily to speed up future requests. Caching happens at multiple 
+      layers: your browser, your operating system, and your recursive resolver. Each record has a 
+      <strong>TTL (Time To Live)</strong> that determines how long it stays cached.
     </p>
+  </section>
 
-    <!-- 9. Reverse DNS -->
+  <!-- Concept 8 -->
+  <section>
     <div class="concept-header">
-      <img src="images/reverse.png" class="icon-light" alt="Reverse DNS icon">
-      <h2>9. Reverse DNS Lookup</h2>
+      <img src="images/dnssec.png" alt="DNSSEC Icon" class="icon-light">
+      <h2>DNSSEC</h2>
     </div>
     <p>
-      A reverse DNS lookup does the opposite of a normal DNS query: it takes an IP address 
-      and returns the associated domain name. It is commonly used for email security and 
-      troubleshooting.
+      DNSSEC adds cryptographic signatures to DNS responses, preventing attackers from forging or tampering 
+      with DNS data. It ensures authenticity but does not encrypt the data itself.
     </p>
+  </section>
 
+  <!-- Concept 9 -->
+  <section>
+    <div class="concept-header">
+      <img src="images/encryption.png" alt="Encrypted DNS Icon" class="icon-light">
+      <h2>Encrypted DNS (DoH & DoT)</h2>
+    </div>
+    <p>
+      Modern DNS protocols like <strong>DNS over HTTPS (DoH)</strong> and <strong>DNS over TLS (DoT)</strong> 
+      encrypt DNS queries to protect user privacy. These protocols prevent ISPs and attackers from seeing 
+      which websites you are looking up.
+    </p>
   </section>
 
   <!-- Footer -->
@@ -149,6 +161,10 @@
       <a href="https://ksuweb.github.io/IT3203/">IT 3203 Website</a>
     </p>
   </footer>
+
+</body>
+</html>
+
 
 </body>
 </html>
