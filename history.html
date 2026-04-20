@@ -69,26 +69,116 @@
   </section>
 
   <!-- Evolution Section -->
-  <section>
-    <h2>How DNS Evolved Over Time</h2>
-    <p>
-      As the internet expanded, DNS had to adapt to new challenges. Early DNS servers handled 
-      only basic name-to-IP lookups, but modern DNS includes advanced features such as:
-    </p>
+<section>
+  <h2>How DNS Evolved Over Time</h2>
+  <p>
+    As the internet expanded, DNS had to adapt to new challenges. Early DNS servers handled 
+    only basic name-to-IP lookups, but modern DNS includes advanced features such as:
+  </p>
 
-    <ul>
-      <li><strong>Anycast routing</strong> for faster global performance</li>
-      <li><strong>Load balancing</strong> to distribute traffic across servers</li>
-      <li><strong>DNSSEC</strong> to prevent spoofing and tampering</li>
-      <li><strong>Encrypted DNS</strong> to protect user privacy</li>
-      <li><strong>Massive caching systems</strong> to reduce lookup time</li>
-    </ul>
+  <ul>
+    <li><strong>Anycast routing</strong> for faster global performance</li>
+    <li><strong>Load balancing</strong> to distribute traffic across servers</li>
+    <li><strong>DNSSEC</strong> to prevent spoofing and tampering</li>
+    <li><strong>Encrypted DNS</strong> to protect user privacy</li>
+    <li><strong>Massive caching systems</strong> to reduce lookup time</li>
+  </ul>
 
-    <p>
-      These improvements allow DNS to remain fast, secure, and reliable even as the internet 
-      continues to grow at an enormous scale.
-    </p>
-  </section>
+  <p>
+    These improvements allow DNS to remain fast, secure, and reliable even as the internet 
+    continues to grow at an enormous scale.
+  </p>
+</section>
+
+<!-- ARPANET Growth Section -->
+<section>
+  <h2>The Growth of ARPANET and the Naming Problem</h2>
+  <p>
+    In the 1970s, ARPANET connected only a small number of research institutions and government labs.
+    At this stage, maintaining a single <strong>HOSTS.TXT</strong> file was manageable because only a few
+    dozen computers needed name-to-address mappings.
+  </p>
+
+  <p>
+    But as more universities, military networks, and international partners joined ARPANET, the number
+    of hosts grew rapidly. By 1982, the HOSTS.TXT file had become several hundred lines long and was
+    updated multiple times per day. Network administrators struggled to keep their local copies
+    synchronized.
+  </p>
+
+  <div id="highlight-box">
+    The internet was growing faster than humans could manually update the HOSTS.TXT file — a clear sign
+    that automation was needed.
+  </div>
+
+  <p>
+    This scaling crisis set the stage for a new, distributed naming system that could grow without
+    human bottlenecks.
+  </p>
+</section>
+
+<!-- Mockapetris Section -->
+<section>
+  <h2>Paul Mockapetris and the Birth of DNS</h2>
+  <p>
+    In 1983, computer scientist <strong>Paul Mockapetris</strong> proposed a radical redesign of how the
+    internet should handle naming. Instead of relying on a single file, he envisioned a distributed,
+    hierarchical system where responsibility could be delegated across many servers.
+  </p>
+
+  <p>
+    Mockapetris published two foundational documents:
+  </p>
+
+  <ul>
+    <li><strong>RFC 882</strong> – The original specification of the Domain Name System</li>
+    <li><strong>RFC 883</strong> – Details on DNS implementation and concepts</li>
+  </ul>
+
+  <p>
+    These RFCs introduced the core ideas we still use today: domains, zones, resolvers, and authoritative servers.
+    DNS was officially born.
+  </p>
+</section>
+
+<!-- Why DNS Was Revolutionary -->
+<section>
+  <h2>Why DNS Was Revolutionary</h2>
+  <p>
+    DNS solved several major problems that were holding the early internet back:
+  </p>
+
+  <ul>
+    <li><strong>Scalability:</strong> No more single file — DNS could grow to millions of names.</li>
+    <li><strong>Delegation:</strong> Organizations could manage their own domains independently.</li>
+    <li><strong>Redundancy:</strong> Multiple servers ensured reliability and uptime.</li>
+    <li><strong>Human-friendly names:</strong> Users could type <em>example.com</em> instead of an IP address.</li>
+  </ul>
+
+  <p>
+    These innovations made the internet accessible to the public and laid the foundation for the modern web.
+  </p>
+</section>
+
+<!-- Modern Challenges -->
+<section>
+  <h2>Modern DNS Challenges</h2>
+  <p>
+    As the internet expanded into billions of devices, DNS faced new challenges that required ongoing
+    innovation. Some of the most significant include:
+  </p>
+
+  <ul>
+    <li><strong>Security threats:</strong> DNS spoofing, cache poisoning, and man-in-the-middle attacks.</li>
+    <li><strong>Privacy concerns:</strong> Traditional DNS queries were unencrypted and visible to ISPs.</li>
+    <li><strong>Performance demands:</strong> Global services require fast DNS resolution across continents.</li>
+    <li><strong>Massive scale:</strong> Cloud platforms and CDNs generate millions of DNS records dynamically.</li>
+  </ul>
+
+  <p>
+    These challenges led to the development of DNSSEC, encrypted DNS protocols, and global Anycast networks.
+  </p>
+</section>
 
   <!-- Footer -->
   <footer>
