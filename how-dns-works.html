@@ -43,6 +43,24 @@
     </div>
   </section>
 
+  <!-- Recursive vs Iterative -->
+  <section>
+    <h2>Recursive vs. Iterative DNS Queries</h2>
+    <p>
+      DNS lookups can happen in two different ways: <strong>recursive</strong> and <strong>iterative</strong>.
+      Most users never notice the difference, but understanding these two methods explains why DNS is so efficient.
+    </p>
+
+    <ul>
+      <li><strong>Recursive query:</strong> Your resolver does all the work for you. It contacts each DNS server in the chain until it finds the answer.</li>
+      <li><strong>Iterative query:</strong> Each DNS server responds with the “next place to look,” and the resolver continues the search.</li>
+    </ul>
+
+    <p>
+      Most modern DNS systems use a combination of both, depending on the server and the type of request.
+    </p>
+  </section>
+
   <!-- Step-by-Step Lookup -->
   <section>
     <h2>Step-by-Step: How a DNS Lookup Works</h2>
@@ -62,6 +80,47 @@
     <p>
       Even though this process involves multiple servers, it usually completes in under a
       hundred milliseconds thanks to caching and optimized routing.
+    </p>
+  </section>
+
+  <!-- DNS Caching -->
+  <section>
+    <h2>DNS Caching: Why Lookups Are Usually Instant</h2>
+    <p>
+      DNS caching is one of the biggest reasons the internet feels fast. Instead of repeating the entire lookup
+      process every time, DNS stores results temporarily at multiple layers:
+    </p>
+
+    <ul>
+      <li><strong>Browser cache:</strong> Stores recently visited domains for a short time.</li>
+      <li><strong>Operating system cache:</strong> Shared by all applications on your device.</li>
+      <li><strong>Recursive resolver cache:</strong> Stores millions of DNS records for thousands of users.</li>
+    </ul>
+
+    <p>
+      Each cached record has a <strong>TTL (Time To Live)</strong> value that determines how long it stays valid.
+      When the TTL expires, the resolver must perform a fresh lookup.
+    </p>
+  </section>
+
+  <!-- DNS Record Types -->
+  <section>
+    <h2>Common DNS Record Types</h2>
+    <p>
+      DNS uses different types of records to store information about a domain. Each record serves a specific purpose:
+    </p>
+
+    <ul>
+      <li><strong>A Record:</strong> Maps a domain to an IPv4 address.</li>
+      <li><strong>AAAA Record:</strong> Maps a domain to an IPv6 address.</li>
+      <li><strong>CNAME Record:</strong> Points one domain to another domain.</li>
+      <li><strong>MX Record:</strong> Specifies mail servers for a domain.</li>
+      <li><strong>NS Record:</strong> Identifies the authoritative name servers.</li>
+      <li><strong>TXT Record:</strong> Stores text data, often for security or verification.</li>
+    </ul>
+
+    <p>
+      These records work together to define how a domain behaves on the internet.
     </p>
   </section>
 
@@ -87,11 +146,35 @@
     </p>
   </section>
 
+  <!-- Real Example -->
+  <section>
+    <h2>Example: DNS Lookup for <em>google.com</em></h2>
+    <p>
+      To see DNS in action, here’s what happens when you visit <strong>google.com</strong>:
+    </p>
+
+    <ol>
+      <li>Your browser checks its cache for google.com.</li>
+      <li>Your operating system checks its DNS cache.</li>
+      <li>Your recursive resolver checks its cache.</li>
+      <li>If not found, the resolver asks a root server.</li>
+      <li>The root server points to the <strong>.com</strong> TLD server.</li>
+      <li>The TLD server points to Google’s authoritative DNS servers.</li>
+      <li>The authoritative server returns multiple IP addresses for load balancing.</li>
+      <li>Your browser connects to the fastest available Google server.</li>
+    </ol>
+
+    <p>
+      This entire process happens in a fraction of a second, thanks to caching and global DNS infrastructure.
+    </p>
+  </section>
+
   <!-- Footer -->
   <footer>
     <p>This site is a class project for IT 3203. Visit the course page:
       <a href="https://ksuweb.github.io/IT3203/">IT 3203 Website</a>
     </p>
+  </footer>
   </footer>
 
 </body>
