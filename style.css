@@ -40,6 +40,11 @@ p {
   color: #66cfff;              /* Neon hover */
 }
 
+.main-nav a.active {
+  border-bottom: 3px solid #1e90ff;
+  padding-bottom: 4px;
+}
+
 /* CONTENT SECTIONS */
 
 section {
